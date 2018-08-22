@@ -2,12 +2,15 @@
 // Project: https://github.com/louischatriot/nedb
 // Definitions by: Stefan Steinhart <https://github.com/reppners>
 //                 Anthony Nichols <https://github.com/anthonynichols>
+//                 maca134 <https://github.com/maca134>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
+
+import { EventEmitter } from "events";
 
 export = Nedb;
 export as namespace Nedb;
 
-declare class Nedb {
+declare class Nedb extends EventEmitter {
     constructor(pathOrOptions?: string | Nedb.DataStoreOptions);
 
     persistence: Nedb.Persistence;
